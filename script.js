@@ -1,53 +1,57 @@
-"use strict"
+"use strict";
+// task 1
 
-//task 1
-const car = { 
-    name: 'Lexus', 
-    age: 10,
-    create: 2008,
-    needRepair: false
-  };
+let c = 0;
+let result = c === 0 ? (c = 0) : c < 0 ? (c = "less then zero") : (c *= 10);
 
-  if (car.age > 5) {
-      console.log("Need Repair");
-      car.needRepair = true;
-  } else {
-      car.needRepair = false;
-  }
+console.log(result);
 
 //task 2
 
-
-  const item = { 
-    name: 'Intel core i7', 
-    price: '100$', 
-    discount: '15%' 
-  };
-
-  if (item.hasOwnProperty("discount") &&  item.discount !== NaN && item.hasOwnProperty("price") && item.price !== NaN){
-      item.priceWithDiscount = parseInt(item.price) * parseInt(item.discount) * 0.01;
-      console.log(item.priceWithDiscount);
-  } else {
-      console.log(item.price);
+function invertedString(str) {
+  let string = "";
+  for (let i = str.length - 1; i >= 0; i--) {
+    string += str[i];
   }
+  return string;
+}
 
-// task 3
+console.log(invertedString("tseb eht ma i"));
 
+//task 3
 
+const Array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15];
 
-
-
-
-  const product = {
-    name: 'Яблоко',
-    price: '10$'
-  };
-  
-  const min = 10;
-  const max = 20;
-
-  if (parseInt(product.price) >= min && parseInt(product.price) <= max) {
-      console.log(product.name);
-  } else {
-      console.log("товар не найден");
+function eachOddNumber(numbers) {
+  const res = [];
+  for (let i = 0; i < numbers.length; ++i) {
+    if (numbers[i] % 2 !== 0) res.push(numbers[i]);
   }
+  return res;
+}
+
+console.log(eachOddNumber(Array));
+
+//task 3.1
+function oddNumbers(numbers) {
+  const res = [];
+  for (let i of numbers) {
+    if (i % 2 !== 0) res.push(i);
+  }
+  return res;
+}
+console.log(oddNumbers(Array));
+
+//task 3.2
+
+//task 4
+
+function getCodeStringFromText(obj) {
+  let res = "";
+
+  for (let i = 0; i < obj.length; i++) {
+    res += obj.charCodeAt(i) + " ";
+  }
+  return res.trim();
+}
+console.log(getCodeStringFromText("hello"));
