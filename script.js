@@ -1,21 +1,31 @@
 "use strict";
 
 //task 1
-
-function changeCollection() {
-  let result = arguments;
-  for (let i = 0; i < arguments.length; i += 1) {
-    arguments[i].shift();
-  }
-  return result;
-}
-console.log(changeCollection(["a", "b", "c"], ["d", "e"]));
-
-//task 2
-
-//task 3
-function randomElement(array) {
-  let result = array[Math.round(Math.random() * (array.length - 1))];
-  return result;
-}
-console.log(randomElement([1, 2, 3, 4]));
+let car = {
+  drive: function (time) {
+    return time * this.speed;
+  },
+};
+let bmv = {
+  model: "m3",
+  speed: 280,
+};
+bmv.__proto__ = car;
+let toyota = {
+  model: "supra",
+  speed: 260,
+};
+toyota.__proto__ = car;
+let mazda = {
+  model: "mx 5",
+  speed: 220,
+};
+mazda.__proto__ = car;
+console.log(
+  bmv.drive(3),
+  bmv.drive(10),
+  toyota.drive(3),
+  toyota.drive(10),
+  mazda.drive(3),
+  mazda.drive(10)
+);
