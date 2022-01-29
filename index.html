@@ -4,9 +4,54 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Github Users</title>
+    <link rel="stylesheet" href="styles/style.css" />
   </head>
-  <body>
-    <script src="./script.js"></script>
+
+  <body class="page">
+    <header class="header">
+      <hav class="header_nav container">
+        <a
+          class="header__logo"
+          href="https://github.com/"
+          target="_blank"
+          rel="noopener norefferer"
+        >
+          <img
+            src="images/github.svg"
+            alt="github logo"
+            width="50"
+            height="50"
+          />
+          <p>Github Users</p>
+        </a>
+      </hav>
+    </header>
+    <main class="content">
+      <h1 class="visually-hidden">GitHub Users App</h1>
+      <section class="container">
+        <h2 class="visually-hidden">User List</h2>
+        <ul class="users"></ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="footer__container container">
+        <img
+          class="footer__logo"
+          src="images/github.svg"
+          alt="github logo"
+          width="24"
+          height="24"
+        />
+        <p>2022</p>
+      </div>
+    </footer>
+    <script src="js/script.js"></script>
   </body>
 </html>
