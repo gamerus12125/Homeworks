@@ -26,10 +26,14 @@ const getUser = (user) => {
   userItem.append(userRepos);
 };
 const createUsers = async (url) => {
-  let response = await fetch(url);
-  let users = await response.json();
-  for (let i = 0; i <= users.length - 1; i++) {
-    getUser(users[i]);
+  try {
+    let response = await fetch(url);
+    let users = await response.json();
+    for (let i = 0; i <= users.length - 1; i++) {
+      getUser(users[i]);
+    }
+  } catch (error) {
+    console.error(error);
   }
 };
 createUsers(url);
